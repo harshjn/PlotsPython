@@ -7,3 +7,7 @@ ax2=ax1.twinx()
 ax2.plot(xmat1,np.multiply(-1,Pmat),'r')
 ax2.set_ylabel(' Log(Probability) observed',color='r')
 ax2.tick_params('y',colors='r')
+
+
+np.savetxt('myfile.txt', np.column_stack([xmat1,Pmat,F(xmat1)]))
+#np.loadtxt('myfile.txt')
